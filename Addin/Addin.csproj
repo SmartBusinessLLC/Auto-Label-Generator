@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5516B8AF-1F78-42B5-A787-A73F10B0B614}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Addin</RootNamespace>
+    <AssemblyName>D365O.Addin.AutoNewLabels</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SkipAssemblyComVisible>true</SkipAssemblyComVisible>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\0sb1isrv.3oa\Microsoft.Dynamics.AX.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.AX.Metadata.Modeling">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\w3030jqo.jne\Microsoft.Dynamics.AX.Metadata.Modeling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamics.Framework.Tools.MetaModel">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\w3030jqo.jne\Microsoft.Dynamics.Framework.Tools.MetaModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.14.0, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AsParseLabel.cs" />
+    <Compile Include="ClassForInstallation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\CreateLabels_DataEntity.cs" />
+    <Compile Include="Classes\CreateLabels_TableExtension.cs" />
+    <Compile Include="Classes\CreateLabels.cs" />
+    <Compile Include="Classes\CreateLabels_BaseEnum.cs" />
+    <Compile Include="Classes\CreateLabels_BaseEnumExtension.cs" />
+    <Compile Include="Classes\CreateLabels_Edt.cs" />
+    <Compile Include="Classes\CreateLabels_Form.cs" />
+    <Compile Include="Classes\CreateLabels_MenuItem.cs" />
+    <Compile Include="Classes\CreateLabels_SecurityPrivilege.cs" />
+    <Compile Include="Classes\CreateLabels_Table.cs" />
+    <Compile Include="Classes\CreateLabels_View.cs" />
+    <Compile Include="Classes\CreateLabels_WorkflowApproval.cs" />
+    <Compile Include="Classes\CreateLabels_WorkflowCategory.cs" />
+    <Compile Include="Classes\CreateLabels_WorkflowHierarchyAssignmentProvider.cs" />
+    <Compile Include="Classes\CreateLabels_WorkflowTask.cs" />
+    <Compile Include="Classes\CreateLabels_WorkflowType.cs" />
+    <Compile Include="Classes\CreateLabels_Class.cs" />
+    <Compile Include="Classes\LabelDto.cs" />
+    <Compile Include="Classes\LabelFileName.cs" />
+    <Compile Include="Forms\LabelFilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelFilesForm.designer.cs">
+      <DependentUpon>LabelFilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelForm.Designer.cs">
+      <DependentUpon>LabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LabelGlobalSettingsRes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LabelGlobalSettingsRes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LabelGroupsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelGroupsForm.Designer.cs">
+      <DependentUpon>LabelGroupsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\LabelManager.cs" />
+    <Compile Include="Forms\LabelsFileNamesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LabelsFileNamesForm.Designer.cs">
+      <DependentUpon>LabelsFileNamesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Log.cs" />
+    <Compile Include="Classes\Logging.cs" />
+    <Compile Include="Classes\MainMenuAddIn.cs" />
+    <Compile Include="Classes\DesignerContextMenuAddIn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AddinResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddinResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AddinResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddinResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelFilesForm.resx">
+      <DependentUpon>LabelFilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelForm.resx">
+      <DependentUpon>LabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelGlobalSettingsRes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LabelGlobalSettingsRes.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelGroupsForm.resx">
+      <DependentUpon>LabelGroupsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LabelsFileNamesForm.resx">
+      <DependentUpon>LabelsFileNamesForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="LabelFileNamesUserSettings.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(INETROOT)\build\msbuild\MS.Dynamics.Build.Targets" Condition=" '$(INETROOT)' != '' " />
+  <Import Project="$(INETROOT)\Source\Frameworks\DevToolsVS12\common\Microsoft.Dynamics.Framework.Tools.Extensibility.Targets" Condition=" '$(INETROOT)' != '' " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Dynamics\AX\Microsoft.Dynamics.Framework.Tools.Extensibility.targets" Condition=" '$(INETROOT)' == '' " />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup Condition="'$(BuildingInsideVisualStudio)'=='true'">
+    <PostBuildEvent>call "$(ProjectDir)\installtovs.bat" "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties LabelFileNamesUserSettings_1json__JSONSchema="http://json.schemastore.org/bootstraprc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
