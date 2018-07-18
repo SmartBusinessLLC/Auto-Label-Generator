@@ -67,3 +67,11 @@ Auto Label Generator - is a tool for automatic labels generation from code and f
 ![](https://raw.githubusercontent.com/SmartBusinessLLC/Auto-Label-Generator/master/Images/19.png)
 
 ![](https://raw.githubusercontent.com/SmartBusinessLLC/Auto-Label-Generator/master/Images/20.png)
+
+# Version
+
+Was tesded on Environment: Update11 (7.0.4679.35176) Microsoft Dynamics 365 for Finance and Operations, Enterprise edition (July 2017)
+
+Visual Studio:
+
+Microsoft Visual Studio Professional 2015 Version 14.0.25420.01 Update 3
