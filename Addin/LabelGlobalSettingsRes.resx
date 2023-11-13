@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="labelFilePathPostfix" xml:space="preserve">
-    <value>Microsoft\VisualStudio\14.0</value>
+    <value>Microsoft\VisualStudio\16.0</value>
   </data>
   <data name="labelsCheckedFileName" xml:space="preserve">
     <value>LabelFileNamesCheckedUserSettings.json</value>

@@ -18,7 +18,7 @@ namespace ClassForInstallation
         //Global variables which contains dll - files name and path to install
         RegistryKey rk;
         RegistryKey tmpRk;
-        string registryPathAddIn = @"SOFTWARE\Microsoft\VisualStudio\14.0\ExtensionManager\EnabledExtensions";
+        string registryPathAddIn = @"SOFTWARE\Microsoft\VisualStudio\16.0\ExtensionManager\EnabledExtensions";
         string addInsKey = "DynamicsRainierVSTools-52924ab1-c4fa-47fc-a90d-a5d1e69986bb";
         //string bpPartPath = @"\AOSService\PackagesLocalDirectory\Bin\BPExtensions";
         //string bpRuleFileName = "BPCompositeDataEntity.dll";
@@ -68,7 +68,7 @@ namespace ClassForInstallation
                 rk = RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.Users, RegistryView.Registry32);
                 tmpRk = RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.Users, RegistryView.Registry32);
             }
-            // because Installer runs on NT AUTHORITY\SYSTEM user it is needed to look thru all users who have installed Visual Studio 2015 and D365FO
+            // because Installer runs on NT AUTHORITY\SYSTEM user it is needed to look thru all users who have installed Visual Studio 2019 and D365FO
             foreach (string userName in rk.GetSubKeyNames())
             {
                 string regPath = "";
