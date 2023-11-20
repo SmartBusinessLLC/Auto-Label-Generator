@@ -64,8 +64,8 @@ namespace Addin
 
                 if (changes)
                 {
-                    var metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
-                    var metaModelService = metaModelProviders.CurrentMetaModelService;
+                    //var metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
+                    var metaModelService = DesignMetaModelService.Instance.CurrentMetaModelService; // metaModelProviders.CurrentMetaModelService;
                     // Getting the model will likely have to be more sophisticated, such as getting the model of the project and checking
                     // if the object has the same model.
                     // But this shold do for demonstration.
@@ -143,8 +143,8 @@ namespace Addin
             
             if (changes)
             {
-                var metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
-                var metaModelService = metaModelProviders.CurrentMetaModelService;
+                //var metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
+                var metaModelService = DesignMetaModelService.Instance.CurrentMetaModelService; // metaModelProviders.CurrentMetaModelService;
                 // Getting the model will likely have to be more sophisticated, such as getting the model of the project and checking
                 // if the object has the same model.
                 // But this shold do for demonstration.

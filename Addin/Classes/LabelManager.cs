@@ -468,8 +468,8 @@ namespace Addin
         /// <remarks>For sure there is a better way to do it</remarks>
         protected static IMetaModelService CurrentModel()
         {
-            IMetaModelProviders metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
-            IMetaModelService metaModelService = metaModelProviders.CurrentMetaModelService;
+            //IMetaModelProviders metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
+            IMetaModelService metaModelService = DesignMetaModelService.Instance.CurrentMetaModelService; // metaModelProviders.CurrentMetaModelService;
 
             return metaModelService;
         }
@@ -483,8 +483,8 @@ namespace Addin
         /// <remarks>For sure there is a better way to do it</remarks>
         protected static IMetaModelService Model(string modelName)
         {
-            IMetaModelProviders metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
-            IMetaModelService metaModelService = metaModelProviders.GetMetaModelService(modelName);
+            //IMetaModelProviders metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
+            IMetaModelService metaModelService = DesignMetaModelService.Instance.CurrentMetaModelService; // metaModelProviders.GetMetaModelService(modelName);
 
             return metaModelService;
         }

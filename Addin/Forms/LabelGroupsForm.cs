@@ -422,8 +422,8 @@ namespace Addin
         }
         protected static IMetaModelService CurrentModel()
         {
-            IMetaModelProviders metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
-            IMetaModelService metaModelService = metaModelProviders.CurrentMetaModelService;
+            //IMetaModelProviders metaModelProviders = ServiceLocator.GetService(typeof(IMetaModelProviders)) as IMetaModelProviders;
+            IMetaModelService metaModelService = DesignMetaModelService.Instance.CurrentMetaModelService; // metaModelProviders.CurrentMetaModelService;
 
             return metaModelService;
         }
